@@ -250,3 +250,15 @@ def resnet152(**kwargs: Any) -> ResNet:
     model = ResNet([3, 8, 36, 3], _Bottleneck, **kwargs)
 
     return model
+
+# testing resnet269///
+def resnet269(**kwargs: Any) -> ResNet:
+    """
+    Constructs a ResNet-269 model.
+    
+    Args:
+        kwargs: other arguments for ResNet class, e.g., num_classes, zero_init_residual, etc.
+    """
+    # Bottleneck数量：[stage1, stage2, stage3, stage4]
+    model = ResNet([3, 8, 75, 3], _Bottleneck, **kwargs)
+    return model
